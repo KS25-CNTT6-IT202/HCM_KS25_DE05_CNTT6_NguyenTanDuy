@@ -18,7 +18,7 @@ CREATE TABLE Players (
     pl_wage DECIMAL(15,2) CHECK(pl_wage>=0),
     pl_idTeam VARCHAR(10),
     
-    CONSTRAINT FOREIGN KEY (pl_idTeam) REFERENCES Players(pl_idTeam)
+    CONSTRAINT FK_PlayerTeam FOREIGN KEY (pl_idTeam) REFERENCES Teams(team_id)
 );
 
 
